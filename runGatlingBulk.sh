@@ -25,7 +25,7 @@ trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 usage() { echo "$0 usage:" && grep " .)\ #" $0; exit 0; }
 
 rps=10
-url="http://localhost:9001"
+url="http://localhost:9003"
 payload="ai-api-bulk-local.json"
 
 options=':p:c:u:r:h'

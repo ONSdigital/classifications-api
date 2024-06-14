@@ -21,7 +21,7 @@ import scala.concurrent.{ExecutionContext, Future}
 @Singleton
 class AddressIndexClientMock @Inject()(override val client: WSClient, conf: DemouiConfigModule)
   extends AddressIndexClientInstance(client, conf) {
-  //  set config entry to "http://localhost:9001" to run locally
+  //  set config entry to "http://localhost:9003" to run locally
   //  set config entry to "https://addressindexapitest.cfapps.io" to run from cloud
   override def host: String = s"${conf.config.apiURL.host}:${conf.config.apiURL.port}"
 

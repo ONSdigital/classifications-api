@@ -29,7 +29,7 @@ services:
   address-index-api:
     image: "thornsj/address-index-api:271023"
     ports:
-      - "9001:9000"
+      - "9003:9000"
     depends_on:
       - es
     environment:
@@ -37,18 +37,18 @@ services:
       - ONS_AI_API_ES_URI=es
       - ONS_AI_API_ES_PORT=9200
       - ONS_AI_API_MIN_PARTIAL_SIZE=2
-  address-index-ui:
-    image: "thornsj/address-index-ui:311023"
-    ports:
-      - "5000:5000"
-    depends_on:
-      - address-index-api
-    environment:
-      - API_URL=http://host.docker.internal:9001
-      - BM_API_URL=http://host.docker.internal:9001
-      - PROJECT_DOMAIN=http://localhost:9001
-      - FLASK_ENV=production
-      - FLASK_APP=aims_ui
-      - API_AUTH_TYPE=JWT
-      - JWT_TOKEN=abc123
-      - SECRET_KEY=secret
+#  address-index-ui:
+#    image: "thornsj/address-index-ui:311023"
+#    ports:
+#      - "5000:5000"
+#    depends_on:
+#      - address-index-api
+#    environment:
+#      - API_URL=http://host.docker.internal:9003
+#      - BM_API_URL=http://host.docker.internal:9003
+#      - PROJECT_DOMAIN=http://localhost:9003
+#      - FLASK_ENV=production
+#      - FLASK_APP=aims_ui
+#      - API_AUTH_TYPE=JWT
+#      - JWT_TOKEN=abc123
+#      - SECRET_KEY=secret

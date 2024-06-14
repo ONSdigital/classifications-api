@@ -36,7 +36,7 @@ Another Docker image contains a version of the API that will work with the Elast
     
 3) To run API calls open a browser or API testing app, Postman etc.
 
-        http://localhost:9001/
+        http://localhost:9003/
         
     Endpoints can be found in the Swagger definition /openapi/swagger.json. View as HTML with examples here: 
     
@@ -84,12 +84,12 @@ Another Docker image contains a version of the API that will work with the Elast
     
     Open two command windows running sbt as shown above, one for the API and one for UI
     
-    Use run 9001 to have the API on port 9001 and run 9000 to have the UI on 9000
+    Use run 9003 to have the API on port 9003 and run 9000 to have the UI on 9000
     (i.e. from the root of the address-index-api project run the following commands : 
-        sbt "project address-index-server" "run 9001"
+        sbt "project address-index-server" "run 9003"
         sbt "project address-index-demo-ui" "run 9000"
     )
-    If the UI's application.conf is set to look at localhost:9001 for the API it will work.
+    If the UI's application.conf is set to look at localhost:9003 for the API it will work.
 
     Note that when working on the UI you can save changes and it will autodeploy. This doesn't work with the API becuase of the CRFSuite executable. You have to exit out of sbt and rerun.
 

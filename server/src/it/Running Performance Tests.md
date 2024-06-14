@@ -94,7 +94,7 @@ A useful example is as follows, where the number of users is passed in, a specif
 (The above runs the gatling simulation using the configuration under the ai-api-pcs-exeter key in the conf files in `src/it/resources` and assumes that the AI server is running locally, for example, like so:
 ```shell
 JAVA_OPTS="-Xms2g -Xmx2g -DONS_AI_API_ES_PORT=9200 -DONS_AI_API_ES_URI=localhost -DONS_AI_API_HYBRID_INDEX_HIST=hybrid-historical_811_111017_1530276985432" \
-sbt "project address-index-server" "run 9001"
+sbt "project address-index-server" "run 9003"
 ```
 The above runs the AI server and configures it to use ElasticSearch running at `localhost:9200` with index name specified by ONS_AI_API_HYBRID_INDEX_HIST property.
 )
